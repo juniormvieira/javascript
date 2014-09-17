@@ -34,3 +34,15 @@ function mostraEsconde(idElemento){
         meuElemento.style.display = "block";  
     }  
 }
+//Procura em um texto de um elemento(idTexto) uma palavra digitada em um input Text (idPalavra)
+function posicaoTexto(idTexto,idPalavra) {
+    var texto = document.getElementById(idTexto).innerHTML;
+    var palavra = document.getElementById(idPalavra).value;
+    var pos = texto.indexOf(palavra);
+    if(pos >= 0){
+        alert("O Texto está na posição: " + pos);
+    }else
+    {
+        alert("Texto não encontrado");
+    }  
+}
